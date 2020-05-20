@@ -1,0 +1,163 @@
+body {
+  padding: 50px;
+}
+main {
+  width: 1196px;
+}
+.event_list ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+.event_list li {
+  flex: 0 1 25%;
+  padding: 0 0 34px;
+}
+.event_list li a {
+  width: 271px;
+  height: 382px;
+  border: 1px solid #ddd;
+  display: block;
+  position: relative;
+  line-height: 1;
+}
+
+.event_list li a .img {
+  overflow: hidden;
+  position: relative;
+  width: 271px;
+  height: 272px;
+  border-bottom: 1px solid #ddd;
+}
+.event_list li a .img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.event_list li a .info {
+  padding: 29px 10px 0;
+}
+.event_list li a .info strong {
+  display: block;
+  /* 가로사이즈를 주고 그 사이즈를 오버할시 hidden을 주고
+  white-space:nowrap으로 줄내림이 없이 만들고
+  text-overflow:ellipsis를 주면 텍스트가 일정범위를 초과하면 ...으로 처리가 됨 */
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  color: #222;
+}
+
+.event_list li a p {
+  font-size: 13px;
+  padding: 20px 0 0;
+  color: #888;
+}
+
+.event_list li a p span {
+  color: #ed1846;
+  font-size: 15px;
+}
+
+.event_list li a em {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 60px;
+  border-radius: 100%;
+}
+
+.paging {
+  width: 100%;
+  padding: 28px 0 60px;
+}
+
+.paging ul {
+  display: flex;
+  justify-content: center;
+}
+
+.paging a {
+  display: block;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  font-size: 15px;
+  color: #555;
+}
+
+.paging a:hover,
+.paging a.on {
+  background: #ed1846;
+  color: #fff;
+}
+
+.paging li {
+  margin: 0 7px;
+}
+
+.paging .first {
+  margin: 0 16px 0 0;
+  background: url(../images/prev-first.png) no-repeat center;
+}
+
+.paging .prev {
+  margin: 0 6px 0 0;
+  background: url(../images/paging-prev.png) no-repeat center;
+}
+
+.paging .last {
+  margin: 0 0 0 16px;
+  background: url(../images/next-last.png) no-repeat center;
+}
+
+.paging .next {
+  margin: 0 0 0 6px;
+  background: url(../images/paging-next.png) no-repeat center;
+}
+.paging .first a:hover,
+.paging .prev a:hover,
+.paging .last a:hover,
+.paging .next a:hover {
+  background: none;
+}
+
+.search {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0 20px;
+  text-align: center;
+  /* 폰트사이즈 0을 주게되면 붙게됨 */
+  font-size: 0;
+}
+
+.search * {
+  height: 53px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+}
+.search select {
+  width: 148px;
+}
+
+.search input {
+  width: 258px;
+}
+
+.search button {
+  width: 150px;
+  height: 53px;
+  border: none;
+  color: #fff;
+  background: #ed1846;
+}
