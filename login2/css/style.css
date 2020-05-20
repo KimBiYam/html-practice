@@ -69,7 +69,7 @@
 
 /* 체크되면 label의 before 스타일을 바꿈 */
 .login > ul li input[type="checkbox"]:checked + label::before {
-  background: url(/images/ico_check_on.png) no-repeat #333 center;
+  background: url(../images/ico_check_on.png) no-repeat #333 center;
   border-color: #333;
 }
 
