@@ -11,16 +11,23 @@
     <section class="login">
       <h2>로그인</h2>
       <ul>
-        <li><input type="text" placeholder="아이디" title="아이디입력" /></li>
         <li>
-          <input type="password" placeholder="비밀번호" title="비밀번호입력" />
+          <input id="id" type="text" placeholder="아이디" title="아이디입력" />
+        </li>
+        <li>
+          <input
+            id="password"
+            type="password"
+            placeholder="비밀번호"
+            title="비밀번호입력"
+          />
         </li>
         <li>
           <input type="checkbox" id="chk_id" /><label for="chk_id"
             >아이디저장</label
           >
         </li>
-        <li><button>로그인</button></li>
+        <li><button id="loginBtn">로그인</button></li>
       </ul>
       <div>
         <ul>
@@ -31,5 +38,25 @@
       </div>
       <a href="#">비회원 주문조회</a>
     </section>
+    <script>
+      const loginBtn = document.getElementById("loginBtn");
+      loginBtn.onclick = function () {
+        const id = document.getElementById("id");
+        const password = document.getElementById("password");
+        if (id.value === "") {
+          alert("아이디를 입력하세요!");
+          id.focus();
+          return false;
+        }
+        if (password.value === "") {
+          alert("패스워드를 입력하세요!");
+          password.focus();
+          return false;
+        }
+        alert("로그인 성공!");
+        id.value = "";
+        password.value = "";
+      };
+    </script>
   </body>
 </html>
